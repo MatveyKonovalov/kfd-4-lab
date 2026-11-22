@@ -17,5 +17,14 @@ tasks.withType<Test>().configureEach {
 }
 
 application {
-    mainClass.set("analyzer.MainKt")
+    mainClass.set("fileworker.MainKt")
+}
+tasks.named<JavaExec>("run"){
+    errorOutput = System.err
+    standardOutput = System.out
+}
+tasks.jar {
+    manifest {
+        attributes["Main-Class"] = "fileworker.MainKt"
+    }
 }
