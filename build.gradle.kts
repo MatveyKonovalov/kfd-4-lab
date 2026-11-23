@@ -1,30 +1,14 @@
 plugins {
-    kotlin("jvm") version "2.4.20"
+    alias(libs.plugins.kotlin.jvm) apply false
     application
 }
 
-kotlin {
-    jvmToolchain(21)
-}
 
 dependencies {
-    testImplementation("org.junit.jupiter:junit-jupiter:6.1.3")
-    testRuntimeOnly("org.junit.platform:junit-platform-launcher:6.1.3")
-}
-
-tasks.withType<Test>().configureEach {
-    useJUnitPlatform()
+    implementation(project(":cli"))
 }
 
 application {
     mainClass.set("fileworker.MainKt")
 }
-tasks.named<JavaExec>("run"){
-    errorOutput = System.err
-    standardOutput = System.out
-}
-tasks.jar {
-    manifest {
-        attributes["Main-Class"] = "fileworker.MainKt"
-    }
-}
+

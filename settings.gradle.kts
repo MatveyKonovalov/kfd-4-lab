@@ -12,3 +12,6 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "kfd-monolith-lab"
+
+include("core")
+include("cli")

@@ -1,5 +1,8 @@
 package fileworker
 
+
+import datawork.FileExceptions
+import datawork.getAnalyze
 import kotlin.system.exitProcess
 
 fun main(args: Array<String>) {
@@ -24,9 +27,10 @@ fun main(args: Array<String>) {
     } catch (e: FileExceptions.IncorrectDirectoryWay) {
         println(e.message)
         exitProcess(2)
+    } catch (e: FileExceptions.ExceptFileNotDirectory){
+        println(e.message)
+        exitProcess(3)
     }
-
-
 }
 
 

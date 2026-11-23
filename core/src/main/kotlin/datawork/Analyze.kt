@@ -1,7 +1,6 @@
-package fileworker
+package datawork
 
 import java.io.File
-import kotlin.system.exitProcess
 
 data class ExtensionReport(val extension: String, val cntFiles: Int, val cntLines: Int)
 data class FileReport(val path: String, val amountLines: Int) : Comparable<FileReport> {

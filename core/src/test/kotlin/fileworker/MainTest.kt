@@ -1,5 +1,9 @@
 package fileworker
 
+import datawork.ExtensionReport
+import datawork.FileExceptions
+import datawork.FileReport
+import datawork.getAnalyze
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertThrows

@@ -1,4 +1,4 @@
-package fileworker
+package datawork
 
 sealed class FileExceptions(message: String) : IllegalArgumentException(message) {
     data class IncorrectDirectoryWay(override val message: String = "Incorrect way") : FileExceptions(message)

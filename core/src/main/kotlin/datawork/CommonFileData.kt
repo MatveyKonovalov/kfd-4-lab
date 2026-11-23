@@ -1,4 +1,4 @@
-package fileworker
+package datawork
 
 object CommonFileData {
     private val _bannedDirectory = setOf("git", "gradle")

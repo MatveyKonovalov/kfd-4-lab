@@ -1,4 +1,4 @@
-package fileworker
+package datawork
 
 import java.io.File
 import java.nio.file.Files
