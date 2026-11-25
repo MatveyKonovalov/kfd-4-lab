@@ -46,6 +46,7 @@ fun makeAnaLyze(files: List<File>, countLines: (File) -> Int, getPath: (File) ->
         ExtensionReport(extension = key, cntFiles = excalc.amountFiles, cntLines = excalc.amountLines)
     }
 
+
     fileReports.sort()
     val topThree = fileReports.take(3)
 
